@@ -54,9 +54,13 @@ const routes = express.Router()
   *     })
   * })
  */
+routes.get('/ongs', async (require, response) => {
+    const ongs = await connection('ongs').select('*');
 
+    return response.json(ongs)
+})
  
-// Cria um novo usuario atraves do post
+// Cadastra uma nova ong
 routes.post('/ongs', async (Request, Response) => {
     const { nome, email, whatsapp, cidade, uf} = Request.body;
 
@@ -71,7 +75,7 @@ routes.post('/ongs', async (Request, Response) => {
         uf
     })
 
-    return Response.json()
+    return Response.json({ id })
 })
 
  // Exporta esse arquivo para ser usado em outros lugares

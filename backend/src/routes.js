@@ -1,4 +1,8 @@
 const express = require('express')
+const crypto = require('crypto')
+
+const connection = require('./database/connection')
+
 const routes = express.Router()
 
 /**
@@ -53,28 +57,22 @@ const routes = express.Router()
 
  
 // Cria um novo usuario atraves do post
-routes.post('/users', (Request, Response) => {
-    const body = Request.body;
-    
-    console.log(body)
+routes.post('/ongs', async (Request, Response) => {
+    const { nome, email, whatsapp, cidade, uf} = Request.body;
 
-    return Response.json(
-    {
-        evento: "Semana Omnistack 11",
-        aluno: 'Igor Gabriel'
+    const id = crypto.randomBytes(4).toString('HEX')
+
+    await connection('ongs').insert({
+        id,
+        nome,
+        email,
+        whatsapp,
+        cidade,
+        uf
     })
+
+    return Response.json()
 })
-
-
-// Busca uma informação
-routes.get('/users', (Request, Response) => {
-     return Response.json(
-        {
-            evento: "Semana Omnistack 11",
-            aluno: 'Igor Gabriel'
-        }
-    )
- })
 
  // Exporta esse arquivo para ser usado em outros lugares
  module.exports = routes;

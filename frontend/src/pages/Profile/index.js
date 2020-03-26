@@ -6,7 +6,7 @@ import api from "../../services/api";
 import "./styles.css";
 
 export default function Profile() {
-  const [incidents, setIncidents] = useState([]);
+  const [casos, setCasos] = useState([]);
 
   const ongNome = localStorage.getItem("ongNome");
   const ongId = localStorage.getItem("ongId");
@@ -19,11 +19,11 @@ export default function Profile() {
         headers: { Authorization: ongId }
       })
       .then(response => {
-        setIncidents(response.data);
+        setCasos(response.data);
       });
   }, [ongId]);
 
-  async function handleDeleteIncident(id) {
+  async function handleApagarCaso(id) {
     try {
       await api.delete(`casos/${id}`, {
         headers: {
@@ -31,7 +31,7 @@ export default function Profile() {
         }
       });
 
-      setIncidents(casos.filter(casos => casos.id !== id));
+      setCasos(casos.filter(caso => casos.id !== id));
     } catch (err) {
       alert("Erro ao deletar o caso");
     }
@@ -45,7 +45,7 @@ export default function Profile() {
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="Be The Hero" />
-        <span>Bem vinda, {ongName}</span>
+        <span>Bem vinda, {ongNome}</span>
 
         <Link to="/casos/novo" className="button">
           Cadastrar novo caso
@@ -62,10 +62,10 @@ export default function Profile() {
         {casos.map(casos => (
           <li key={casos.id}>
             <strong>CASO:</strong>
-            <p>{casos.title}</p>
+            <p>{casos.titulo}</p>
 
             <strong>DESCRIÇÃO:</strong>
-            <p>{casos.description}</p>
+            <p>{casos.descricao}</p>
 
             <strong>VALOR:</strong>
             <p>
@@ -77,7 +77,7 @@ export default function Profile() {
 
             <button
               type="button"
-              onClick={() => handleDeletarCaso(casos.id)}
+              onClick={() => handleApagarCaso(casos.id)}
             >
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>

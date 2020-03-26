@@ -2,21 +2,25 @@
 	Semana OmniStack 11.0 em Desenvolvimento
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/igorgabrielg/Omnistack11?color=%2304D361">
-	
+  <a>
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/igorgabrielg/Omnistack11?color=green">
+  </a>
+  
+  <a>
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/igorgabrielg/Omnistack11?color=green">
+  </a>
+  
   <a href="https://www.linkedin.com/in/igorgabrielg/">
-    <img alt="Made by Igor Gabriel" src="https://img.shields.io/badge/made%20by-Igor Gabriel-%2304D361">
+    <img alt="Made by Igor Gabriel" src="https://img.shields.io/badge/made%20by-Igor Gabriel-%2304D361?color=green">
   </a>
 
   <a href="https://github.com/igorgabrielg/Omnistack11/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/igorgabrielg/Omnistack11">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/igorgabrielg/Omnistack11?color=green">
   </a>
 
-  <a href="https://github.com/igorgabrielg/Omnistack11/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/igorgabrielg/Omnistack11">
+  <a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-bright?color=green">
   </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <p align="center">
   <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

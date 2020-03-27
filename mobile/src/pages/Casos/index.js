@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
-import { Image, FlatList, Text, View, TouchableOpacidade } from 'react-native';
+import { Image, FlatList, Text, View, TouchableOpacity } from 'react-native';
 
 import api from '../../services/api'
 
@@ -82,13 +82,13 @@ export default function Casos() {
                             currency: 'BRL'
                         }).format(caso.value)}
                     </Text>
-                    <TouchableOpacidade
+                    <TouchableOpacity
                     style={styles.detalhesButton}
                     onPress={ () => navigationToDetalhe(caso) }
                     >
                         <Text style={styles.detalhesButtonText}>Ver mais detalhes</Text>
                         <Feather name="arrow-right" size={16} color="#E02041"/>
-                    </TouchableOpacidade>
+                    </TouchableOpacity>
                 </View>                
             )}
           />

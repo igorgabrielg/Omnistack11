@@ -32,10 +32,12 @@ export default function Casos() {
         setLoading(true)
 
         const response = await api.get('casos', {
-            params: {page}
+            params: { page }
         })
 
-        setCasos([... casos, ...response.data])
+        console.log(response.data)
+
+        setCasos([...casos, ...response.data.casos]);
         setTotal(response.headers['x-total-count'])
         setPage(page + 1)
         setLoading(false)

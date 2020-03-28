@@ -31,7 +31,7 @@ export default function Profile() {
         }
       });
 
-      setCasos(casos.filter(caso => casos.id !== id));
+      setCasos(casos.filter(casos => casos.id !== id));
     } catch (err) {
       alert("Erro ao deletar o caso");
     }
@@ -75,10 +75,7 @@ export default function Profile() {
               }).format(casos.value)}
             </p>
 
-            <button
-              type="button"
-              onClick={() => handleApagarCaso(casos.id)}
-            >
+            <button onClick={() => handleApagarCaso(casos.id)} type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>

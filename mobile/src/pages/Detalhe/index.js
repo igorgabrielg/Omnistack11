@@ -1,7 +1,7 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { Image, Text, View, TouchableOpacidade, Linking } from 'react-native';
+import { Image, Text, View, TouchableOpacity, Linking } from 'react-native';
 import * as MailComposer from 'expo-mail-composer'
 
 import logoImg from '../../assets/logo.png';
@@ -35,9 +35,9 @@ export default function Detalhe() {
 
           <View style={styles.header}>
               <Image source={logoImg}/>
-              <TouchableOpacidade onPress={ navigationBack } >
+              <TouchableOpacity onPress={ navigationBack } >
                       <Feather name="arrow-left" size={28} color="#E82041"/>
-              </TouchableOpacidade>
+              </TouchableOpacity>
           </View>
 
           <View style={styles.caso}>
@@ -63,12 +63,12 @@ export default function Detalhe() {
             <Text style={styles.heroDescricao}>Entre em contato:</Text>
 
             <View style={styles.actions}>
-              <TouchableOpacidade style={styles.action} onPress={ sendWhatsapp } >
+              <TouchableOpacity style={styles.action} onPress={ sendWhatsapp } >
                 <Text style={styles.actionText}>Whatsapp</Text>
-              </TouchableOpacidade>
-              <TouchableOpacidade style={styles.action} onPress={ sendMail } >
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.action} onPress={ sendMail } >
                 <Text style={styles.actionText}>E-mail</Text>
-              </TouchableOpacidade>
+              </TouchableOpacity>
             </View>
           </View>
 

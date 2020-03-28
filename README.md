@@ -59,8 +59,8 @@ O Be The Hero é um projeto que visa conectar pessoas que estão dispostas a aju
 **Mobile**
 
 <div>
-	<img src="imgs/mobile_casos.PNG" width="300px" align="right">
-	<img src="imgs/detalhes.PNG" width="300px" align="center">
+	<img src="imgs/mobile_casos.PNG" width="300px" align="center">
+	<img src="imgs/detalhes.PNG" width="300px" align="right">
 </div>
 
 ## 🤔 Como contribuir
